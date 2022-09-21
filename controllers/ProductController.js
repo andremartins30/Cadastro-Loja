@@ -1,13 +1,25 @@
+const { getProducts } = require('../model/Product')
 const Product = require('../model/Product')
 
 module.exports = class ProductController {
-    static showProduct(req, res) {
-        res.render('products/all')
+    static async showProduct(req, res) {
+
+        const products = await Product.getProducts()
+
+        res.render('products/all', {products})
     }
 
     static createProduct(req, res) {
         res.render('products/create')
     }
+
+    static async reportProduct(req, res) {
+
+        const products = await Product.getProducts()
+
+        res.render('products/report', {products})
+    }
+
 
     static createProductPost(req, res) {
 

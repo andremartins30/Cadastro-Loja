@@ -2,7 +2,7 @@
     font-family: Helvetica;
     margin: 0;
     padding: 0;
-    background-color: #e6e6f9;
+    background-color: #fff;
     color: #3a22a4;
 }
 
@@ -15,7 +15,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e6e6f9;
     border-bottom: 1px solid #2acf18;
 }
 
@@ -39,7 +38,7 @@
     padding: 2em;
 }
 
-.container{
+.container h1{
     margin-bottom: 1em;
 }
 
@@ -60,7 +59,7 @@
 
 .form-control input,
 .form-control textarea {
-    padding: 7px;
+    padding: 8px;
     border-radius: 3px;
     border: 1px solid #2acf18;
 }
@@ -105,4 +104,21 @@ form input[type='submit']:hover,
 
 .product h3{
     margin-bottom: 1em;
+}
+
+table{
+    
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid #2acf18;
+}
+
+table td{
+    width: 25%;
+}
+
+table tr{
+    background: #333; 
+    color: #fff;
+    padding: 15px 0;
 }

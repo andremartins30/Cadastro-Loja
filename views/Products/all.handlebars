@@ -1,1 +1,10 @@
-<h2>Produtos</h2>
+<h2>Produtos cadastrados</h2>
+<div class="products">
+    {{#each products}}
+    <div class="product">
+        <img src="{{this.image}}" alt="{{this.name}}">
+        <h3>{{this.name}}</h3>
+        <p>R${{this.price}}</p>
+    </div>
+    {{/each}}
+</div>

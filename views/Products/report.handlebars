@@ -2,22 +2,19 @@
 <div class="products">
     <form action="/report" method="POST">
         <table>
-            <tr>
-                <td>Nome do produto</td>
-                <td>Preço</td>
-                <td>Descrição</td>
-            </tr>
-        <div class="product">
-
+                <tr class="title">
+                    <td>Nome do produto</td>
+                    <td>Preço</td>
+                    <td>Descrição</td>
+                </tr>
             {{#each products}}
                 <tr>
                     <td>{{this.name}}</td>
                     <td>R${{this.price}},00</td>
                     <td>{{this.description}}</td>
-
                 </tr>
             {{/each}}
-        </div>
+    
         </table>
     </form>
 </div>

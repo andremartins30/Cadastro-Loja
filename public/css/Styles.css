@@ -34,6 +34,12 @@
     font-weight: bold;
 }
 
+.container img {
+    max-width:400px;
+    max-height:250px;
+    width: auto;
+    height: auto;
+}
 .container{
     padding: 2em;
 }
@@ -102,23 +108,27 @@ form input[type='submit']:hover,
     margin-bottom: 0.5em;
 }
 
-.product h3{
+.product h3, h2 {
     margin-bottom: 1em;
 }
 
 table{
-    
+    width: 500px;
     text-align: center;
-    border-radius: 3px;
-    border: 1px solid #2acf18;
+    border-collapse: collapse;
+    border: 2px solid #3a22a4;
 }
 
-table td{
-    width: 25%;
+tr.title{
+    font-weight: bold;
+    border: 2px solid #3a22a4
 }
 
-table tr{
-    background: #333; 
-    color: #fff;
+td{
+    border: 1px solid #3a22a4;
+    padding: 7px;
+}
+
+tr{
     padding: 15px 0;
 }

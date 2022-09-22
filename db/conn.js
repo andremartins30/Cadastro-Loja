@@ -1,8 +1,8 @@
 const {MongoClient} = require('mongodb')
 
-const uri = "mongodb://127.0.0.1:27017/Cadastro-Loja"
+const url = "mongodb://127.0.0.1:27017/Cadastro-Loja"
 
-const client = new MongoClient(uri)
+const client = new MongoClient(url)
 
 
 async function run(){

@@ -1,46 +1,14 @@
-const conn = require('../db/conn')
-const {ObjectId} = require('mongodb')
-
-class Product  {
-    constructor(name, price, description, image) {
-        this.name = name
-        this.price = price
-        this.description = description
-        this.image = image
-    }
-
-    save(){
-        const product = conn
-            .db()
-            .collection('products')
-            .insertOne({
-                name: this.name,
-                price: this.price,
-                description: this.description,
-                image: this.image
-            })
-
-            return product
-    }
-
-    static getProducts(){
-        const products = conn
-            .db()
-            .collection('products')
-            .find()
-            .toArray()
-        return products
-    }
-
-    static async getProductById(id){
-        const product = await conn
-            .db()
-            .collection('products')
-            .findOne({ _id: ObjectId(id) })
-        console.log(id)
-        return product
-    }
-}
+const mongoose = require('mongoose')
+const { Schema } = mongoose
+const Product = mongoose.model(
+    'Product',
+    new Schema({
+        name: {type: String, required: true},
+        price: {type: Number, required: true},
+        description: {type: String, required: true},
+        image: {type: String, required: true},
+    })
+)
 
 
 module.exports = Product

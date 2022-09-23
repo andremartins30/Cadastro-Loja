@@ -7,7 +7,6 @@ class Product  {
         this.price = price
         this.description = description
         this.image = image
-
     }
 
     save(){
@@ -30,7 +29,6 @@ class Product  {
             .collection('products')
             .find()
             .toArray()
-
         return products
     }
 

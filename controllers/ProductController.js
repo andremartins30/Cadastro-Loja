@@ -32,7 +32,7 @@ module.exports = class ProductController {
 
         await product.save()
 
-        res.redirect('/')
+        res.redirect('/products')
     }
 
 
@@ -48,9 +48,9 @@ module.exports = class ProductController {
     static async removeProduct(req, res){
         const id = req.params.id
 
-        await Product.deleteOne({_id:id})
+        await Product.deleteOne({ _id : id })
 
-        res.redirect('/')
+        res.redirect('/products')
     }
 
 
@@ -71,9 +71,9 @@ module.exports = class ProductController {
 
         const product = {name, image, price, description}
 
-        await Product.updateOne({_id:id}, product)
+        await Product.updateOne({ _id :id }, product)
 
-        res.redirect('/')
+        res.redirect('/products')
     }
 
  

@@ -1,7 +1,7 @@
-<a href="/">Voltar</a>
+<a href="/products">Voltar</a>
 <h2>Relatório de produtos</h2>
 <div class="products">
-    <form action="/report" method="POST">
+    <form action="/products/report" method="POST">
         <table>
                 <tr class="title">
                     <td>Nome do produto</td>
@@ -14,8 +14,8 @@
                     <td>{{this.name}}</td>
                     <td>R${{this.price}},00</td>
                     <td>{{this.description}}</td>
-                    <td><a href="/remove/{{product._id}}">Deletar</a> 
-                    <a href="/edit/{{this._id}}">Editar</a></td>
+                    <td>
+                    <a href="/products/edit/{{this._id}}">Editar</a></td>
                 </tr>
             {{/each}}
         </table>

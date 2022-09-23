@@ -1,8 +1,5 @@
 #Sistema de cadastro de produtos 
 
-Para acessar o sistema é necessário instalar as dependencias pelo npm
+Para acessar o sistema é necessário abrir a pasta no terminal e dar o comando:
 
-`npm init`
-
-`npm install express express-handlebars nodemon mongodb mongoose`
-
+`npm start`

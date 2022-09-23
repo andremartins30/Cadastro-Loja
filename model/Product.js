@@ -37,7 +37,7 @@ class Product  {
             .db()
             .collection('products')
             .findOne({ _id: ObjectId(id) })
-
+        console.log(id)
         return product
     }
 }

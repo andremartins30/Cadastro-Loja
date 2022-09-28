@@ -25,5 +25,5 @@ app.use(express.static('public'))
 
 app.use('/products', productsRoutes)
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
     console.log('Servidor rodando na porta: http://localhost:3000/products')

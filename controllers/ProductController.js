@@ -60,7 +60,7 @@ module.exports = class ProductController {
         const product = await Product.findById(id).lean()
     
         res.render('products/edit', { product })
-      }
+    }
     
     static async editProductPost(req, res) {
         const id = req.body.id
@@ -75,6 +75,4 @@ module.exports = class ProductController {
 
         res.redirect('/products')
     }
-
- 
 }                               
